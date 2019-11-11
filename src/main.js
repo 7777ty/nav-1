@@ -7,11 +7,8 @@ const hashMap = xObject || [
     { logo: "B", logoType: 'text', url: "https://www.bilibili.com", name: "bilibili" },
 ];
 
-const modify = () => {
-
-}
-
 const render = () => {
+
     $siteList.find('li:not(.last)').remove();
     hashMap.forEach((node, index) => {
         const $li = $(`<li>
@@ -29,15 +26,14 @@ const render = () => {
             window.open(node.url);
         });
         $li.on('click', '.details', (e) => {
+            console.log("click:", hashMap)
+            console.log("click:", index)
             e.stopPropagation();
             $("#shade").removeClass("hide");
             $(".c3").removeClass("hide");
-            $(".c3 button").click(function () {
-                $("#shade").addClass("hide");
-                $(".c3").addClass("hide");
-            });
             $(".c3").on('click', '.close', () => {
-
+                console.log("close:", hashMap)
+                console.log("close:", index)
                 hashMap.splice(index, 1);
                 render();
                 window.location.reload();
@@ -56,10 +52,9 @@ const render = () => {
                         name: name,
                         url: url
                     });
+                    render();
                     $(".url input[type='text']").val("");
                     $(".name input[type='text']").val("");
-                    render();
-                    window.location.reload();
                 }
             })
         });
@@ -78,8 +73,11 @@ $(".c2 button").click(function () {
     $("#shade").addClass("hide");
     $(".c2").addClass("hide");
 });
-
-
+$(".c3 button").click(function () {
+    $("#shade").addClass("hide");
+    $(".c3").addClass("hide");
+    window.location.reload();
+});
 
 
 $("#modal .permit").click(function () {

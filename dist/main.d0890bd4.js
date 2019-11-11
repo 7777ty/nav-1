@@ -134,8 +134,6 @@ var hashMap = xObject || [{
   name: "bilibili"
 }];
 
-var modify = function modify() {};
-
 var render = function render() {
   $siteList.find('li:not(.last)').remove();
   hashMap.forEach(function (node, index) {
@@ -144,14 +142,14 @@ var render = function render() {
       window.open(node.url);
     });
     $li.on('click', '.details', function (e) {
+      console.log("click:", hashMap);
+      console.log("click:", index);
       e.stopPropagation();
       $("#shade").removeClass("hide");
       $(".c3").removeClass("hide");
-      $(".c3 button").click(function () {
-        $("#shade").addClass("hide");
-        $(".c3").addClass("hide");
-      });
       $(".c3").on('click', '.close', function () {
+        console.log("close:", hashMap);
+        console.log("close:", index);
         hashMap.splice(index, 1);
         render();
         window.location.reload();
@@ -171,10 +169,9 @@ var render = function render() {
             name: name,
             url: url
           });
+          render();
           $(".url input[type='text']").val("");
           $(".name input[type='text']").val("");
-          render();
-          window.location.reload();
         }
       });
     });
@@ -189,6 +186,11 @@ $(".addButton").click(function () {
 $(".c2 button").click(function () {
   $("#shade").addClass("hide");
   $(".c2").addClass("hide");
+});
+$(".c3 button").click(function () {
+  $("#shade").addClass("hide");
+  $(".c3").addClass("hide");
+  window.location.reload();
 });
 $("#modal .permit").click(function () {
   if ($(".url input[type='text']").val() && $(".name input[type='text']").val()) {
@@ -216,4 +218,4 @@ window.onbeforeunload = function () {
   localStorage.setItem('x', string);
 };
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.862f3c87.js.map
+//# sourceMappingURL=main.d0890bd4.js.map

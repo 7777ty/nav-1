@@ -240,7 +240,7 @@ ul,ol{list-style: none;}
     .globalHeader .search >button{
         width: 100px;
         height: 44px;
-        margin-right: 50px;
+        margin-left:10px;
     }
     .globalHeader >img{
         max-width: 350px;
