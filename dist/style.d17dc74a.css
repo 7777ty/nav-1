@@ -245,9 +245,8 @@ ul,ol{list-style: none;}
         margin-right: auto;
     }
     .siteList{
-        margin-left:0;
-        margin-right: 0;
-        margin-right: -60px;
+        margin-left:0px;
+        margin-right: -47px;
         justify-content: flex-start;
     }
     .siteList > li{
@@ -286,7 +285,8 @@ ul,ol{list-style: none;}
     #modal >p:first-child {
         font-size: 16px;
         top:10px;
-        left: 10px;
+        left: -10px;
+
     }
     #modal .p {
 
@@ -296,17 +296,18 @@ ul,ol{list-style: none;}
         padding: 16px;
     }
     #modal p {
-        font-size: 10px;
-        margin-bottom: 5px;
+        font-size: 16px;
+        margin-bottom: 5px;        
 
     }
     #modal p >:only-child{
         width:320px;
         height:34px;
+
     }
     #modal button{
         margin-top: 15px;
-        font-size: 12px;
+        font-size: 20px;
         border: 1px solid #ddd;
         border-radius: 10px;
     }
@@ -320,4 +321,4 @@ ul,ol{list-style: none;}
     }
 }
 
-/*# sourceMappingURL=style.bf374e75.css.map */
+/*# sourceMappingURL=style.d17dc74a.css.map */
