@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1,minimum-scale=1,maximum-scale=1,
+    user-scalable=no,viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>前端导航网站</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="globalHeader">
+        <img src="./logo.jpg">
+        <form class="search" method="GET" action="https://www.baidu.com/s">
+            <input name="wd" type="text">
+            <button type="submit">搜索</button>
+        </form>
+    </header>
+
+    <main class="globalContent">
+        <ul class="siteList">
+            <li class="last">
+                <div class="addButton">
+                    <div class="iconWrapper">
+                        <svg class="icon">
+                            <use xlink:href="#icon-add"></use>
+                        </svg>
+                    </div>
+                    <div class="text">新增网站</div>
+                </div>
+            </li>
+        </ul>
+        <div id="shade" class="c1 hide"></div>
+        <div id="modal" class="c2 hide">
+            <p>添加快捷方式</p>
+            <div class="p">
+                <p class="name">名称：<input type="text" /></p>
+                <p class="url">网址：<input type="text" /></p>
+                <p>
+                    <button class="permit">确定</button>
+                    <button>取消</button>
+                </p>
+            </div>
+        </div>
+        <div id="modal" class="c3 hide">
+            <p>修改快捷方式</p>
+            <div class="p">
+                <p class="name">名称：<input type="text" /></p>
+                <p class="url">网址：<input type="text" /></p>
+                <p>
+                    <button class="permit">确定</button>
+                    <button>取消</button>
+                    <button class="close">删除</button>
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="//at.alicdn.com/t/font_1497199_kcee4015gnc.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
