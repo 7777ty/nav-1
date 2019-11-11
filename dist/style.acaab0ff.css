@@ -162,7 +162,7 @@ ul,ol{list-style: none;}
     background-color: white;
     position: fixed;
     width: 80%;
-    height: 20%;
+    /* height: 20%; */
     z-index: 3;
     bottom:50%;
     left: 10%;
@@ -175,7 +175,7 @@ ul,ol{list-style: none;}
     background-color: white;
     position: fixed;
     width: 80%;
-    height: 20%;
+    /* height: 20%; */
     z-index: 3;
     bottom:50%;
     left: 10%;
@@ -320,4 +320,4 @@ ul,ol{list-style: none;}
     }
 }
 
-/*# sourceMappingURL=style.bf374e75.css.map */
+/*# sourceMappingURL=style.acaab0ff.css.map */
