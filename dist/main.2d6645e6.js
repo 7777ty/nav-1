@@ -142,14 +142,10 @@ var render = function render() {
       window.open(node.url);
     });
     $li.on('click', '.details', function (e) {
-      console.log("click:", hashMap);
-      console.log("click:", index);
       e.stopPropagation();
       $("#shade").removeClass("hide");
       $(".c3").removeClass("hide");
       $(".c3").on('click', '.close', function () {
-        console.log("close:", hashMap);
-        console.log("close:", index);
         hashMap.splice(index, 1);
         render();
         window.location.reload();
@@ -218,4 +214,4 @@ window.onbeforeunload = function () {
   localStorage.setItem('x', string);
 };
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.d0890bd4.js.map
+//# sourceMappingURL=main.2d6645e6.js.map

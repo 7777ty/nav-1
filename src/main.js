@@ -26,14 +26,11 @@ const render = () => {
             window.open(node.url);
         });
         $li.on('click', '.details', (e) => {
-            console.log("click:", hashMap)
-            console.log("click:", index)
+
             e.stopPropagation();
             $("#shade").removeClass("hide");
             $(".c3").removeClass("hide");
             $(".c3").on('click', '.close', () => {
-                console.log("close:", hashMap)
-                console.log("close:", index)
                 hashMap.splice(index, 1);
                 render();
                 window.location.reload();
