@@ -108,10 +108,10 @@ ul,ol{list-style: none;}
     margin-left: 12.5px;
     overflow-wrap: break-word;
 }
-.siteList .details{
+.siteList .site > .details{
     width: 1px;
     position: absolute;
-    right:0px;
+    right:0;
     top:0;
 
 }
@@ -121,6 +121,7 @@ ul,ol{list-style: none;}
     height: 70px;
     margin-left: 12.5px;
 }
+
 
 .siteList .addButton .icon{
     width: 40px;
@@ -184,7 +185,7 @@ ul,ol{list-style: none;}
 
 }
 
-#modal .p {
+#model .p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -192,7 +193,7 @@ ul,ol{list-style: none;}
     margin-top: 16%;
 }
 
-#modal p {
+#model p {
     font-size: 20px;
     font-family: 'Segoe UI', 'Roboto', arial, sans-serif;
     margin-left: 20px;
@@ -200,7 +201,7 @@ ul,ol{list-style: none;}
 
 }
 
-#modal >p:first-child {
+#model >p:first-child {
     position: absolute;
     top:7px;
     left: 0px;
@@ -209,14 +210,14 @@ ul,ol{list-style: none;}
 
 }
 
-#modal p >:only-child{
+#model p >:only-child{
     height: 30px;
     padding: 0 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-#modal button{
+#model button{
     margin-top: 15px;
     font-size: 20px;
     border: 1px solid #ddd;
@@ -274,7 +275,7 @@ ul,ol{list-style: none;}
         width: 352px;
         height: 254px;
     }
-    #modal{
+    #model{
         border-radius: 10px ;
         width: 352px;
         position: absolute;   
@@ -282,30 +283,30 @@ ul,ol{list-style: none;}
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    #modal >p:first-child {
+    #model >p:first-child {
         font-size: 16px;
         top:10px;
         left: -10px;
 
     }
-    #modal .p {
+    #model .p {
 
         margin-top: 11%;
         width: 320px;
         height: 183px;
         padding: 16px;
     }
-    #modal p {
+    #model p {
         font-size: 16px;
         margin-bottom: 5px;        
 
     }
-    #modal p >:only-child{
+    #model p >:only-child{
         width:320px;
         height:34px;
 
     }
-    #modal button{
+    #model button{
         margin-top: 15px;
         font-size: 20px;
         border: 1px solid #ddd;
@@ -321,4 +322,4 @@ ul,ol{list-style: none;}
     }
 }
 
-/*# sourceMappingURL=style.d17dc74a.css.map */
+/*# sourceMappingURL=style.44ebc439.css.map */

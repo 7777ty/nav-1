@@ -140,17 +140,18 @@ var render = function render() {
     var $li = $("<li>\n        <div class=\"site\">\n            <div class=\"logo\">".concat(node.logo, "</div>\n            <div class=\"details\">\n                <svg class=\"icon\" aria-hidden=\"true\">\n                    <use xlink:href=\"#icon-details\"></use>\n                </svg>\n            </div>\n        </div>\n        <div class=\"link\">").concat(node.name, "</div>\n    </li>")).insertBefore($lastLi);
     $li.click(function () {
       window.open(node.url);
+      console.log(index);
     });
     $li.on('click', '.details', function (e) {
       e.stopPropagation();
-      $("#shade").removeClass("hide");
       $(".c3").removeClass("hide");
-      $(".c3").on('click', '.close', function () {
+      $(".close").click(function () {
+        console.log("删除成功了");
+        console.log("index:" + index);
         hashMap.splice(index, 1);
         render();
-        window.location.reload();
       });
-      $(".c3").on('click', '.permit', function () {
+      $(".permit").click(function () {
         if ($(".c3 .url input[type='text']").val() && $(".c3 .name input[type='text']").val()) {
           var url = $(".c3 .url input[type='text']").val();
           var name = $(".c3 .name input[type='text']").val();
@@ -170,25 +171,24 @@ var render = function render() {
           $(".name input[type='text']").val("");
         }
       });
+      $("button").click(function () {
+        window.location.reload();
+      });
     });
   });
 };
 
 render();
 $(".addButton").click(function () {
-  $("#shade").removeClass("hide");
   $(".c2").removeClass("hide");
 });
 $(".c2 button").click(function () {
-  $("#shade").addClass("hide");
   $(".c2").addClass("hide");
 });
 $(".c3 button").click(function () {
-  $("#shade").addClass("hide");
   $(".c3").addClass("hide");
-  window.location.reload();
 });
-$("#modal .permit").click(function () {
+$(".c2 .permit").click(function () {
   if ($(".url input[type='text']").val() && $(".name input[type='text']").val()) {
     var url = $(".url input[type='text']").val();
     var name = $(".name input[type='text']").val();
@@ -214,4 +214,4 @@ window.onbeforeunload = function () {
   localStorage.setItem('x', string);
 };
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.2d6645e6.js.map
+//# sourceMappingURL=main.4af9b378.js.map
